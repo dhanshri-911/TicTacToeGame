@@ -1,16 +1,17 @@
 package com.bridgelabz;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TicTacToeGame {
-	{
+public static Scanner sc = new Scanner(System.in);
+	
 		final int boardSize = 10;
 		char computerLetter = ' ';
 		char playerLetter = ' ';
 		char currentPlayer = ' ';
 		char toss = ' ';
 		char board[] = new char[boardSize];
-		Scanner sc = new Scanner(System.in);
-			
+		
 		TicTacToeGame(){
 			for(int i = 0; i < boardSize; i++)
 				board[i] = ' ';
@@ -283,9 +284,7 @@ public class TicTacToeGame {
 				else
 					return true;				
 		}	
-		
-		public static void main(String... args){
-		
+		static void game() {
 			TicTacToeGame TicTacToe = new TicTacToeGame();		
 			TicTacToe.inputSymbol();		
 			TicTacToe.showBoard();
@@ -306,7 +305,24 @@ public class TicTacToeGame {
 				c++;
 			}
 			
+		
 		}
+		
+		public static void main(String... args){
+		
+			int i=1;
+			while(i>0)
+			{
+				System.out.println("Want to play tictactoe again ; press 'y' for yes or 'n' for No ");
+			
+				char input = sc.next().charAt(0);
+				if(input == 'y'|| input =='Y')
+						game();
+				else
+					System.exit(0);
+				
+				
+			}
 		
 	}
 }
