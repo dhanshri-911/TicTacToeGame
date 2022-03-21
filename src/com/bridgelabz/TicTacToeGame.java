@@ -313,7 +313,7 @@ public static Scanner sc = new Scanner(System.in);
 			int i=1;
 			while(i>0)
 			{
-				System.out.println("Want to play tictactoe again ; press 'y' for yes or 'n' for No");
+				System.out.println("Want to play tictactoe again ; press 'y' for yes or 'n' for No ");
 			
 				char input = sc.next().charAt(0);
 				if(input == 'y'|| input =='Y')
