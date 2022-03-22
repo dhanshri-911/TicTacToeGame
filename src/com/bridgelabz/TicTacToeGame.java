@@ -13,7 +13,7 @@ public static Scanner sc = new Scanner(System.in);
 		char board[] = new char[boardSize];
 		
 		TicTacToeGame(){
-			for(int i = 0; i < boardSize; i++)
+			for(int i = 1;i < boardSize; i++)
 				board[i] = ' ';
 				System.out.println("**Game started**");	
 		}
